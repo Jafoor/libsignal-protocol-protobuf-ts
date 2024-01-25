@@ -7,13 +7,13 @@ TypeScript encoders and decoders for Signal Protocol protocol buffer messages.
 To install just use your favorite package manager:
 
 ```
-yarn add @privacyresearch/libsignal-protocol-protobuf-ts
+yarn add @jafoor/libsignal-protocol-protobuf-ts
 ```
 
 Then you can import the objects as follows:
 
 ```ts
-import { PreKeyWhisperMessage, WhisperMessage } from '@privacyresearch/libsignal-protocol-protobuf-ts'
+import { PreKeyWhisperMessage, WhisperMessage } from '@jafoor/libsignal-protocol-protobuf-ts'
 ```
 
 Once imported, these objects can be used to create, encode, and decode protocol buffer messages.
