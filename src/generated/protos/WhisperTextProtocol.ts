@@ -134,7 +134,9 @@ export const WhisperMessage = {
 export const PreKeyWhisperMessage = {
   encode(message: PreKeyWhisperMessage, writer: Writer = Writer.create()): Writer {
     writer.uint32(40).uint32(message.registrationId);
-    writer.uint32(8).uint32(message.preKeyId);
+    if (message.preKeyId !== null && message.preKeyId !== undefined) {
+      writer.uint32(8).uint32(message.preKeyId);
+    }
     writer.uint32(48).uint32(message.signedPreKeyId);
     writer.uint32(18).bytes(message.baseKey);
     writer.uint32(26).bytes(message.identityKey);
